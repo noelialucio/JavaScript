@@ -5,19 +5,20 @@ let opcion;
 
 
 
-function Combos(nombre, precio) {
+function Combos(nombre, precio, id) {
     this.nombre = nombre;
     this.precio = precio;
+    this.id = id ;
     this.disponible = true;
 }
 
-const combo1 = new Combos("1 Pizza + 1 Bebida",1200);
-const combo2 = new Combos("1 Docena de empanadas + 1 Bebida", 1700);
-const combo3 = new Combos("2 Pizzas + 1 Bebida", 2200);
-const combo4 = new Combos("1 Pizza + 1 Docena de empanadas + 1 Bebida",2500);
-const pizza = new Combos("1 Pizza grande de Muzzarella", 1000);
-const doceEmpanadas = new Combos(" Una docena de empanadas", 1500);
-const bebida = new Combos("Una gaseosa de 2 litros 1/4",  500);
+const combo1 = new Combos("1 Pizza + 1 Bebida",1200, "4");
+const combo2 = new Combos("1 Docena de empanadas + 1 Bebida", 1700,"5");
+const combo3 = new Combos("2 Pizzas + 1 Bebida", 2200, "6");
+const combo4 = new Combos("1 Pizza + 1 Docena de empanadas + 1 Bebida",2500,"7");
+const pizza = new Combos("1 Pizza grande de Muzzarella", 1000, "1");
+const doceEmpanadas = new Combos(" Una docena de empanadas", 1500, "2");
+const bebida = new Combos("Una gaseosa de 2 litros 1/4",  500, "3");
 
 
 const menu = [pizza, doceEmpanadas, bebida, combo1, combo2, combo3, combo4]
@@ -37,31 +38,44 @@ function elegirComida() {
 
     );
     if (producto === "1") {
-        alert("Elegiste una pizza para llevar");
+        alert(`Elegiste la opcion ${pizza.id} : ${pizza.nombre} para llevar y su valor es $ ${pizza.precio}`);
         total += pizza.precio;
     } else if (producto === "2") {
-        alert("Elegiste una docena de empanadas para llevar");
+        alert(`Elegiste  la opcion ${doceEmpanadas.id} : ${doceEmpanadas.nombre} para llevar y su valor es $ ${doceEmpanadas.precio}`);
         total += doceEmpanadas.precio;
     } else if (producto === "3") {
-        alert("Elegiste una bebida para tu pedido");
+        alert(`Elegiste  la opcion ${bebida.id} : ${bebida.nombre} para llevar y su valor es $ ${bebida.precio}`);
         total += bebida.precio;
     } else if (producto === "4") {
-        alert("Elegiste El combo 1 para tu pedido");
+        alert(`Elegiste  la opcion ${ combo1.id} : ${combo1.nombre} para llevar y su valor es $ ${combo1.precio}`);
         total += combo1.precio;
     } else if (producto === "5") {
-        alert("Elegiste El combo 2 para tu pedido");
+        alert(`Elegiste ${combo2.id} : ${combo2.nombre} para llevar y su valor es $ ${combo2.precio}`);
         total += combo2.precio;
     } else if (producto === "6") {
-        alert("Elegiste El combo 3 para tu pedido");
+        alert(`Elegiste la opcion ${combo3.id}  : ${combo3.nombre} para llevar y su valor es $ ${combo3.precio}`);
         total += combo3.precio;
     } else if (producto === "7") {
-        alert("Elegiste El combo 4 para tu pedido");
+        alert(`Elegiste la ocpion ${combo4.id} : ${combo4.nombre} para llevar y su valor es $ ${combo4.precio}`);
         total += combo4.precio
     }
     const pedido =[ ];
-    pedido.push (producto, total);
+    pedido.push (producto, total)
     console.log (pedido)
 }
+
+
+
+/*function cargarPedido () {
+    const pedidoTotal = menu.find ( Combos => Combos.id === producto)
+    console.log (pedidoTotal)
+}*/
+
+//cargarPedido ()
+
+ //const pedido =[ ];
+//pedido.push (producto,total);
+//console.log (pedido)
 
 function abonarPedido(direccion, telefono) {
     alert("Tenes que abonar" + " " + total);
