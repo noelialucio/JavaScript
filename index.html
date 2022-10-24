@@ -15,6 +15,18 @@
 <body>
     <header>
         <h1 class="titulo">PIZZERIA JS</h1>
+        <button id="botonCarrito" class="btn btn-success float-right mx-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>
+            <span id="contadorCarrito"></span><br />Subtotal $<span id="subTotal"
+              >0</span
+            >
+          </button>
+          
+            <button type="button" class="btn btn-danger float-right mx-2" id="cerrarSesion">Cerrar Sesion</button>
+       
+
     </header>
     <main>
         <section>
@@ -25,6 +37,7 @@
                 <div class="row">
                     <div class="card col-6" style="width: 18rem;">
                         <div class="card-body">
+                            <img class= "fotos" src="./fotosjava/comboUno.jpg" alt="">
                             <h5 class="card-title">COMBO 1</h5>
                             <h6 class="card-subtitle mb-2 text-muted">1 PIZZA GRANDE DE MUZZARELLA + 1 BEBIDA DE 1LT 1/2</h6>
                             <p class="card-text"> $ 1200</p>
@@ -35,6 +48,7 @@
 
                     <div class="card col-6" style="width: 18rem;">
                         <div class="card-body">
+                            <img  class= "fotos" src="./fotosjava/comboDos.jpg" alt="">
                             <h5 class="card-title">COMBO 2</h5>
                             <h6 class="card-subtitle mb-2 text-muted">1 DOCENA DE EMPANADAS + 1 BEBIDA DE 1LT 1/2</h6>
                             <p class="card-text">$ 1700</p>
@@ -47,6 +61,7 @@
 
                     <div class="card col - 6" style="width: 18rem;">
                         <div class="card-body">
+                            <img class= "fotos" src="./fotosjava/comboTres.jpg" alt="">
                             <h5 class="card-title">COMBO 3</h5>
                             <h6 class="card-subtitle mb-2 text-muted">DOS PIZZAS + UNA BEBIDA DE 1 LT 1/2</h6>
                             <p class="card-text"> $ 2200</p>
@@ -58,6 +73,7 @@
 
                     <div class="card col-6" style="width: 18rem;">
                         <div class="card-body">
+                            <img class= "fotos" src="./fotosjava/comboCuatro.jpg" alt="">
                             <h5 class="card-title">COMBO 4</h5>
                             <h6 class="card-subtitle mb-2 text-muted">1 PIZZA + UNA DOCENA DE EMPANADAS + UNA BEBIDA 1LT 1/2</h6>
                             <p class="card-text"> $ 2200</p>
@@ -68,45 +84,20 @@
                 </div>
 
             </div>
-            <div class="row">
-                <div class="col-4">
-                    <button type="button" class="btn btn-danger" id="vaciarCarrito">Vaciar carrito</button>
-                </div>
-                <div class="col-4">
-                    <button type="button" class="btn btn-danger" id="finalizarPedido">Finalizar Pedido</button>
-                </div>
-                <div class="col-4">
-                    <button type="button" class="btn btn-danger" id="cerrarSesion">Cerrar Sesion</button>
-                </div>
-            </div>
-           <!-- <button id="boton-carrito" class="btn btn-success float-right mx-2">
-                <i class="fas fa-shopping-cart"></i>
-                <span id="contadorCarrito">0</span><br />Subtotal $<span id="subtotal"
-                  >0</span
-                >
-              </button>-->
-
-
-            </div>
 
 
         </section>
 
     </main>
-    <footer>
-
-    </footer>
 
 
 
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
 
     <script src="./app.js"></script>
-
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

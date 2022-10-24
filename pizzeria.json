@@ -1,0 +1,8 @@
+
+[
+    {"nombre": "1 Pizza + Bebida", "precio":1200,"agregado":"Agregaste el COMBO 1 a tu pedido", "img": "./fotosjava/comboUno.jpg",  "id": 1},
+    {"nombre": "1 Docena de empanadas + 1 Bebida", "precio":1700,"agregado":"Agregaste e COMBO 2 a tu pedido", "img": "./fotosjava/comboDos.jpg",  "id": 2},
+    {"nombre": "2 Pizzas + 1 Bebida", "precio":2200,"agregado":"Agregaste el COMBO 3 a tu pedido", "img": "./fotosjava/comboTres.jpg", "id": 3},
+    {"nombre": "1 Pizza + 1 Docena de empanadas +1 Bebida", "precio" :2500 , "agregado": "Agregaste el COMBO 4 a tu pedido", "img": "./fotosjava/comboCuatro.jpg", "id": 4}
+
+]
